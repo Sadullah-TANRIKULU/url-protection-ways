@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Protection Ways</title>
+</head>
+<body>
+    <h1>URL Protection Ways</h1>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+  const geheim = urlParams.get('geheim');
+
+  if (geheim !== 'bluehendeakademie') {
+    // Wenn das geheime Wort nicht stimmt, zeige keine Seite oder leite weiter
+    document.body.innerHTML = 'Zugriff verweigert!';
+  }
+</script>
+</body>
+</html>
